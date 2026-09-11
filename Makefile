@@ -14,6 +14,12 @@ masters:
 	mv $(BUILD_DIR)/resume-masters.pdf $(MASTERS_PDF)
 verify: all
 	sh tests/verify-resume-build.sh
+pages: all
+	rm -rf pages-dist
+	mkdir -p pages-dist
+	cp pages/index.html pages-dist/index.html
+	cp $(BACHELORS_PDF) pages-dist/index.pdf
+	cp $(BACHELORS_PDF) $(MASTERS_PDF) pages-dist/
 clean:
 	latexmk -C -outdir=$(BUILD_DIR) resume-bachelors.tex resume-masters.tex
 	rm -rf $(BUILD_DIR) pages-dist
