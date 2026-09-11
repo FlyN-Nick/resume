@@ -14,7 +14,8 @@ if grep -Fq 'Malware Analysis & Reverse Engineering' "$bt"; then
   exit 1
 fi
 grep -F 'Docker' "$bt"
-grep -F 'Technologies:' "$bt" | grep -Fq ', SQL,'
+grep -F 'Tools & Frameworks:' "$bt" | grep -Fq ', SQL,'
+grep -F 'Tools & Frameworks:' "$bt" | grep -Fq ', S3,'
 if grep -Fq 'PostgreSQL' "$bt"; then
   printf '%s\n' 'error: technologies must use SQL rather than PostgreSQL' >&2
   exit 1
