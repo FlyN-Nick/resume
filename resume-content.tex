@@ -10,6 +10,9 @@
 	footskip=0.5 cm, % seperation between body and footer
 	% showframe % for debugging
 ]{geometry} % for adjusting page geometry
+\ifmasters
+\geometry{top=1.2 cm, bottom=1.2 cm}
+\fi
 \usepackage{titlesec} % for customizing section titles
 \usepackage{tabularx} % for making tables with fixed width columns
 \usepackage{array} % tabularx requires this
@@ -131,6 +134,16 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 
 	\section{Education}
 
+	\ifmasters
+	\begin{twocolentry}
+		{\textit{Sept 2026 – May 2028 (anticipated)}} \textbf{Columbia University}
+
+		\textit{Master's Degree in Computer Science}
+	\end{twocolentry}
+
+	\vspace{0.10 cm}
+	\fi
+
 	\begin{twocolentry}
 		{
 
@@ -139,15 +152,6 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 
 		\textit{Bachelor's Degree in Computer Science}
 	\end{twocolentry}
-
-	\ifmasters
-	\vspace{0.10 cm}
-	\begin{twocolentry}
-		{\textit{Sept 2026 – May 2028 (anticipated)}} \textbf{Columbia University}
-
-		\textit{Master's Degree in Computer Science}
-	\end{twocolentry}
-	\fi
 
 	\vspace{0.10 cm}
 	\begin{onecolentry}
