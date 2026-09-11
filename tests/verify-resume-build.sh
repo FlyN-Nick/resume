@@ -20,6 +20,7 @@ if grep -Fq 'PostgreSQL' "$bt"; then
   exit 1
 fi
 tr '\n' ' ' < "$bt" | grep -Fq 'Season V US Cyber Combine Athlete'
+grep -F 'Projects & Publications' "$bt"
 if grep -Fq 'Master' "$bt"; then
   printf '%s\n' "error: bachelor's resume must not contain master's content" >&2
   exit 1
