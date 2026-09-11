@@ -39,6 +39,7 @@
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
 \input{glyphtounicode}
+\pdfglyphtounicode{quoteright}{0027}
 \pdfgentounicode=1
 % \usepackage[T1]{fontenc} % this breaks sb2nov
 \usepackage[utf8]{inputenc}
@@ -138,6 +139,15 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 
 		\textit{Bachelor's Degree in Computer Science}
 	\end{twocolentry}
+
+	\ifmasters
+	\vspace{0.10 cm}
+	\begin{twocolentry}
+		{\textit{Sept 2026 – May 2028 (anticipated)}} \textbf{Columbia University}
+
+		\textit{Master's Degree in Computer Science}
+	\end{twocolentry}
+	\fi
 
 	\vspace{0.10 cm}
 	\begin{onecolentry}
