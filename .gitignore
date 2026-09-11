@@ -1,5 +1,6 @@
 build/
 pages-dist/
+resume-content.pdf
 *.aux
 *.log
 *.out

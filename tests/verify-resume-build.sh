@@ -8,6 +8,18 @@ bt="$(mktemp)"; mt="$(mktemp)"
 trap 'rm -f "$bt" "$mt"' EXIT
 pdftotext "$b" "$bt"; pdftotext "$m" "$mt"
 grep -F 'Bachelor' "$bt"
+grep -F 'Malware Analysis, Compilers' "$bt"
+if grep -Fq 'Malware Analysis & Reverse Engineering' "$bt"; then
+  printf '%s\n' 'error: coursework must use the shortened malware analysis label' >&2
+  exit 1
+fi
+grep -F 'Docker' "$bt"
+grep -F 'Technologies:' "$bt" | grep -Fq ', SQL,'
+if grep -Fq 'PostgreSQL' "$bt"; then
+  printf '%s\n' 'error: technologies must use SQL rather than PostgreSQL' >&2
+  exit 1
+fi
+tr '\n' ' ' < "$bt" | grep -Fq 'Season V US Cyber Combine Athlete'
 if grep -Fq 'Master' "$bt"; then
   printf '%s\n' "error: bachelor's resume must not contain master's content" >&2
   exit 1
@@ -20,4 +32,5 @@ bachelor_line="$(grep -n -F "Bachelor's Degree in Computer Science" "$mt" | head
 coursework_line="$(grep -n -F 'Coursework:' "$mt" | head -n 1 | cut -d: -f1)"
 test "$master_line" -lt "$bachelor_line"
 test "$bachelor_line" -lt "$coursework_line"
+test "$(pdfinfo "$b" | awk '/^Pages:/ {print $2}')" -eq 1
 test "$(pdfinfo "$m" | awk '/^Pages:/ {print $2}')" -eq 1
