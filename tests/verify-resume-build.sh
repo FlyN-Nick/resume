@@ -22,6 +22,21 @@ if grep -Fq 'PostgreSQL' "$bt"; then
 fi
 tr '\n' ' ' < "$bt" | grep -Fq 'Season V US Cyber Combine Athlete'
 grep -F 'Projects & Publications' "$bt"
+grep -F 'SRE-Bench: A Realistic, Contamination-Free RE Benchmark' "$bt"
+grep -F 'SRE-Bench' "$bt"
+grep -F 'arXiv:2608.11469' "$bt"
+grep -F 'Vals AI' "$bt"
+grep -F 'and task validation' "$bt"
+grep -F 'cryptocurrency-wallet transfer backdoor' "$bt"
+grep -F 'memorAIs' "$bt"
+if grep -Fq 'Kyntic Wearable Device and App' "$bt"; then
+  printf '%s\n' 'error: default resume must not render the Kyntic project' >&2
+  exit 1
+fi
+if grep -Fq 'Co-author' "$bt"; then
+  printf '%s\n' 'error: publication metadata line must not be included' >&2
+  exit 1
+fi
 if grep -Fq 'Master' "$bt"; then
   printf '%s\n' "error: bachelor's resume must not contain master's content" >&2
   exit 1
