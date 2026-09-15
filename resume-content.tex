@@ -176,7 +176,7 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 		\begin{highlights}
     		\item  Built a multi-agent system that generates Verilog from natural-language specifications and debugs it against a simulator, using critic agents to diagnose failures and steer revisions until hardware designs pass verification
             \item Raised pass@5 accuracy on a frontier RTL coding benchmark from \textbf{38.7\% to 90.1\%} across 262 problems, surpassing NVIDIA Research's published ACE-RTL results of 88.9\% at the same model and attempt budget
-            \item Established that parsing simulator logs into structured feedback outperformed both a model-tier upgrade and extended thinking, shifting the roadmap from model spend to feedback engineering
+            \item Established that parsing simulator logs into structured feedback outperformed both a model-tier upgrade and extended thinking, shifting the team's roadmap away from model spend and toward feedback engineering
 		\end{highlights}
 	\end{onecolentry}
 
@@ -212,9 +212,7 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 	\begin{onecolentry}
 		\begin{highlights}
 			\item Built and deployed an end-to-end ML pipeline forecasting semiannual revenue with \textbf{99.5\% accuracy} \item The deployed pipeline ingests
-			Salesforce opportunity data into Snowflake, engineers SQL features, and runs
-			inference with an ensemble of $>$10 XGBoost models combined via Monte Carlo
-			simulation \item Maximized performance through hyperparameter
+			Salesforce opportunity data into Snowflake, engineers dozens of SQL features, and runs 10+ XGBoost models via Monte Carlo simulation to forecast semiannual revenue \item Maximized performance through hyperparameter
 			optimization, feature engineering, and pipeline redesign
 		\end{highlights}
 	\end{onecolentry}
@@ -252,7 +250,7 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 	\begin{onecolentry}
 		\begin{highlights}
 			\item Trained transformer model on high-dimensional time-series data to benchmark feature extraction methods
-			\item Demonstrated a \textbf{$0.25\,R^2$} increase in predictive performance with CNN \href{https://www.nature.com/articles/s41551-024-01297-1.epdf?sharing_token=fZZhun470YszKrnDx-QYf9RgN0jAjWel9jnR3ZoTv0MYPQvKedbb1N1uAdSoP12oPvK01sHdzr0M5C5JzU9zmH2baRnTsxEvHwONfw2rZYGwoBQCrhryKuh-ekZuA-j2cm35jID9caioBxugTr51rw_AhR94VscSyHpUyi0WKgM}{FENet} model over industry-standard, supporting development of more accurate and efficient ML pipelines for brain-computer interface systems
+			\item Demonstrated a \(\boldsymbol{0.25\,R^2}\) increase in predictive performance with CNN \href{https://www.nature.com/articles/s41551-024-01297-1.epdf?sharing_token=fZZhun470YszKrnDx-QYf9RgN0jAjWel9jnR3ZoTv0MYPQvKedbb1N1uAdSoP12oPvK01sHdzr0M5C5JzU9zmH2baRnTsxEvHwONfw2rZYGwoBQCrhryKuh-ekZuA-j2cm35jID9caioBxugTr51rw_AhR94VscSyHpUyi0WKgM}{FENet} model over industry-standard, supporting development of more accurate and efficient ML pipelines for brain-computer interface systems
 		\end{highlights}
 	\end{onecolentry}
 
@@ -271,7 +269,7 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 	\begin{onecolentry}
 		\begin{highlights}
 			\item Built reproducible evaluation infrastructure for agentic reverse engineering and exploitation, including containerized tools/services, deterministic image builds, Claude/Gemini adapters, and task validation
-			\item Designed a real-world Claude Code security challenge for identifying a cryptocurrency-wallet transfer backdoor, with progressive investigation materials, ground truth, and LLM-as-judge evaluation
+			\item Designed a real-world Claude Code challenge to identify a cryptocurrency-wallet transfer backdoor, with progressive investigative materials, verified ground truth, and LLM-as-judge evaluation criteria
 		\end{highlights}
 	\end{onecolentry}
 
@@ -290,8 +288,8 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 			\item \href{https://github.com/utkarshsingh99/Memorais}{Platform} allows users
 			to scan their on-the-bottle prescription intake directions to generate and
 			download a .ics file pre-configured with intake frequency, duration, and
-			time information straight to their device \item Created algorithm to
-			convert OCR text of the intake directions into a recurring calendar event
+			time information straight to their device \item Developed an algorithm to
+			convert OCR-extracted intake directions into accurate recurring calendar events
 		\end{highlights}
 	\end{onecolentry}
 

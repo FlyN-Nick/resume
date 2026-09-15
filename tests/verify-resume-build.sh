@@ -9,6 +9,14 @@ test -s "$b" && test -s "$m"
 bt="$(mktemp)"; mt="$(mktemp)"
 trap 'rm -f "$bt" "$mt"' EXIT
 pdftotext "$b" "$bt"; pdftotext "$m" "$mt"
+grep -F '\boldsymbol{0.25\,R^2}' resume-content.tex
+if grep -Fq '$>$10 XGBoost' resume-content.tex; then
+  printf '%s\n' 'error: use 10+ rather than >10 for the XGBoost ensemble size' >&2
+  exit 1
+fi
+for pdf in "$b" "$m"; do
+  pdftotext -layout "$pdf" - | grep -F 'Developed an algorithm to convert OCR-extracted intake directions into accurate recurring calendar events'
+done
 
 for text_file in "$bt" "$mt"; do
   grep -F 'Projects & Publications' "$text_file"
@@ -26,6 +34,10 @@ for text_file in "$bt" "$mt"; do
   grep -F 'Plotly and Dash' "$text_file"
   grep -F '38.7% to 90.1%' "$text_file"
   grep -F '0.25 R2 increase' "$text_file"
+  grep -F '10+ XGBoost' "$text_file"
+  grep -F "shifting the team's roadmap away from model spend and toward feedback engineering" "$text_file"
+  grep -F 'progressive investigative materials, verified ground truth, and LLM-as-judge evaluation criteria' "$text_file"
+  grep -F 'OCR-extracted intake directions into accurate recurring calendar events' "$text_file"
   if grep -Fq 'Malware Analysis & Reverse Engineering' "$text_file"; then
     printf '%s\n' 'error: coursework must use the shortened malware analysis label' >&2
     exit 1
