@@ -35,7 +35,9 @@ for text_file in "$bt" "$mt"; do
   grep -F '38.7% to 90.1%' "$text_file"
   grep -F '0.25 R2 increase' "$text_file"
   grep -F '10+ XGBoost' "$text_file"
+  grep -F 'Monte Carlo simulation to probabilistically forecast semiannual revenue' "$text_file"
   grep -F "shifting the team's roadmap away from model spend and toward feedback engineering" "$text_file"
+  grep -F 'Claude Code malware challenge' "$text_file"
   grep -F 'progressive investigative materials, verified ground truth, and LLM-as-judge evaluation criteria' "$text_file"
   grep -F 'OCR-extracted intake directions into accurate recurring calendar events' "$text_file"
   if grep -Fq 'Malware Analysis & Reverse Engineering' "$text_file"; then
