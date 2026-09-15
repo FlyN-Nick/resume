@@ -38,11 +38,6 @@
 \usepackage{needspace} % for avoiding page brake right after the section title
 \usepackage{iftex} % check if engine is pdflatex, xetex or luatex
 \usepackage{comment}
-\usepackage{etoolbox}
-
-% Each entry-point file selects one of the four tailored résumé editions.
-\providecommand{\resumeedition}{ai-security}
-\newcommand{\ifedition}[3]{\ifdefstring{\resumeedition}{#1}{#2}{#3}}
 
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
@@ -161,7 +156,7 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 	\vspace{0.10 cm}
 	\begin{onecolentry}
 		\begin{highlights}
-			\item \textbf{Coursework:} \ifedition{ai-ml-research}{Artificial Intelligence, Statistics, Data Structures, Linear Algebra, Brain-Computer Interfaces, Compilers, Computer Security, Cryptography, and MIPS Architecture}{\ifedition{software-ml-engineering}{Artificial Intelligence, Statistics, Data Structures, Linear Algebra, Brain-Computer Interfaces, Compilers, Computer Security, Cryptography, and MIPS Architecture}{Malware Analysis, Compilers, Computer Security, Cryptography, Statistics, Data Structures, Artificial Intelligence, MIPS Architecture, Linear Algebra, and Brain-Computer Interfaces}} \item \textbf{Extracurriculars:} Columbia Robotics Club
+			\item \textbf{Coursework:} Malware Analysis, Artificial Intelligence, Compilers, Computer Security, Cryptography, Statistics, Data Structures, MIPS Architecture, Linear Algebra, and Brain-Computer Interfaces \item \textbf{Extracurriculars:} Columbia Robotics Club
 			(Pacbot Lead) \& CUCyber Club (Recruitment Chair)
 		\end{highlights}
 	\end{onecolentry}
@@ -275,43 +270,30 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 	\vspace{0.10 cm}
 	\begin{onecolentry}
 		\begin{highlights}
-			\ifedition{ai-ml-research}{
-				\item Built reproducible evaluation infrastructure for agentic reverse engineering, including containerized tools/services, deterministic image builds, Claude/Gemini adapters, and task validation
-				\item Developed LLM-as-judge evaluation methodology with progressive investigation materials and ground truth for agentic security analysis
-			}{\ifedition{security-engineering}{
-				\item Built containerized reverse-engineering and exploitation infrastructure, including deterministic image builds, isolated services, Claude/Gemini adapters, and task validation
-				\item Designed a controlled Claude Code security benchmark for detecting a cryptocurrency-wallet transfer backdoor, with progressive investigation materials, ground truth, and LLM-as-judge evaluation
-			}{\ifedition{software-ml-engineering}{
-				\item Built reproducible agent-evaluation infrastructure with containerized tools/services, deterministic image builds, Claude/Gemini adapters, and standardized task validation
-				\item Developed task-validation and evaluation workflows for multi-agent reverse-engineering systems
-			}{
-				\item Built reproducible evaluation infrastructure for agentic reverse engineering and exploitation, including containerized tools/services, deterministic image builds, Claude/Gemini adapters, and task validation
-				\item Designed a real-world Claude Code security challenge centered on identifying a cryptocurrency-wallet transfer backdoor, with progressive investigation materials, ground truth, and LLM-as-judge evaluation
-			}}}
+			\item Built reproducible evaluation infrastructure for agentic reverse engineering and exploitation, including containerized tools/services, deterministic image builds, Claude/Gemini adapters, and task validation
+			\item Designed a real-world Claude Code security challenge for identifying a cryptocurrency-wallet transfer backdoor, with progressive investigation materials, ground truth, and LLM-as-judge evaluation
 		\end{highlights}
 	\end{onecolentry}
 
-	\ifedition{software-ml-engineering}{
-		\vspace{0.10 cm}
+	\vspace{0.10 cm}
 
-		\begin{twocolentry}
-			{
+	\begin{twocolentry}
+		{
 
-			\textit{\href{https://doi.org/10.48550/arXiv.2312.06841}{ arXiv:2312.06841}}}
-			\textbf{memorAIs}
-		\end{twocolentry}
+		\textit{\href{https://doi.org/10.48550/arXiv.2312.06841}{ arXiv:2312.06841}}}
+		\textbf{memorAIs}
+	\end{twocolentry}
 
-		\vspace{0.10 cm}
-		\begin{onecolentry}
-			\begin{highlights}
-				\item \href{https://github.com/utkarshsingh99/Memorais}{Platform} allows users
-				to scan their on-the-bottle prescription intake directions to generate and
-				download a .ics file pre-configured with intake frequency, duration, and
-				time information straight to their device \item Created algorithm to
-				convert OCR text of the intake directions into a recurring calendar event
-			\end{highlights}
-		\end{onecolentry}
-	}{}
+	\vspace{0.10 cm}
+	\begin{onecolentry}
+		\begin{highlights}
+			\item \href{https://github.com/utkarshsingh99/Memorais}{Platform} allows users
+			to scan their on-the-bottle prescription intake directions to generate and
+			download a .ics file pre-configured with intake frequency, duration, and
+			time information straight to their device \item Created algorithm to
+			convert OCR text of the intake directions into a recurring calendar event
+		\end{highlights}
+	\end{onecolentry}
 
 \begin{comment}
 	\vspace{0.10 cm}
@@ -344,7 +326,7 @@ parsep=0.10 cm, partopsep=0pt, itemsep=0pt, leftmargin=10pt ] }{ \end{itemize} }
 	\vspace{0.10 cm}
 
 	\begin{onecolentry}
-		\textbf{Tools \& Frameworks:} \ifedition{ai-ml-research}{PyTorch, Docker, SQL, S3, React, IDA, Wireshark, Nmap, Kali Linux, Burp Suite}{\ifedition{security-engineering}{IDA, Kali Linux, Wireshark, Burp Suite, Nmap, Docker, PyTorch, SQL, S3, React}{\ifedition{software-ml-engineering}{PyTorch, SQL, Docker, S3, React, IDA, Kali Linux, Wireshark, Burp Suite, Nmap}{PyTorch, IDA, Kali Linux, Wireshark, Burp Suite, Nmap, React, SQL, S3, Docker}}}
+		\textbf{Tools \& Frameworks:} PyTorch, Docker, SQL, S3, React, IDA, Kali Linux, Wireshark, Burp Suite, Nmap
 	\end{onecolentry}
 
 	\vspace{0.10 cm}

@@ -1,17 +1,14 @@
 # Résumé
 
-This repository builds four content editions, each as a bachelor's-only and a
-master's version:
+This repository builds one balanced résumé in two education variants:
 
-- **AI security / agent evaluation** (default): agentic reverse engineering,
-  security evaluation infrastructure, and the Claude Code security challenge.
-- **AI/ML research**: evaluation methodology, agent systems, and ML research.
-- **Security engineering**: reverse engineering, cryptography, and security
-  benchmark construction.
-- **Software/ML engineering**: production ML systems, evaluation infrastructure,
-  and the memorAIs project.
+- bachelor's-only
+- bachelor's plus anticipated Columbia MS in Computer Science
 
-Build and verify all eight PDFs:
+The shared content represents AI/ML systems, agentic security evaluation,
+security engineering, and software/product work.
+
+Build and verify both PDFs:
 
 ```sh
 make verify
@@ -19,18 +16,8 @@ make verify
 
 The generated PDFs are dated with the UTC build date and written to `build/`:
 
-- `nicholas-assaderaghi-resume-YYYY-MM-DD.pdf` — default AI-security, bachelor's
-- `nicholas-assaderaghi-resume-masters-YYYY-MM-DD.pdf` — default AI-security, master's
-- `nicholas-assaderaghi-resume-ai-ml-research[-masters]-YYYY-MM-DD.pdf`
-- `nicholas-assaderaghi-resume-security-engineering[-masters]-YYYY-MM-DD.pdf`
-- `nicholas-assaderaghi-resume-software-ml-engineering[-masters]-YYYY-MM-DD.pdf`
-
-To build a single edition, run its corresponding target; for example:
-
-```sh
-make security-engineering-bachelors
-make software-ml-engineering-masters
-```
+- `nicholas-assaderaghi-resume-YYYY-MM-DD.pdf` — bachelor's-only
+- `nicholas-assaderaghi-resume-masters-YYYY-MM-DD.pdf` — master's version
 
 Create the GitHub Pages artifact locally:
 
@@ -39,8 +26,7 @@ make pages
 ```
 
 This writes the site artifact to `pages-dist/`. Its `index.pdf`, and therefore
-the deployed page, is the default AI-security bachelor's-only résumé. The other
-editions are generated locally and are not published by GitHub Pages.
+the deployed page, is the bachelor's-only résumé.
 
 Before the first deployment, enable GitHub Pages at **Settings → Pages → Build
 and deployment → Source: GitHub Actions**. Pushes to `main` then publish the
