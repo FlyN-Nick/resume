@@ -20,6 +20,12 @@ for text_file in "$bt" "$mt"; do
   grep -F 'Built reproducible evaluation infrastructure for agentic reverse engineering and exploitation' "$text_file"
   grep -F 'cryptocurrency-wallet transfer backdoor' "$text_file"
   grep -F 'memorAIs' "$text_file"
+  grep -F 'Established that parsing simulator logs into structured feedback outperformed both' "$text_file"
+  grep -F 'Built and deployed an end-to-end ML pipeline' "$text_file"
+  grep -F 'ingests Salesforce opportunity data into Snowflake' "$text_file"
+  grep -F 'Plotly and Dash' "$text_file"
+  grep -F '38.7% to 90.1%' "$text_file"
+  grep -F '0.25 R2 increase' "$text_file"
   if grep -Fq 'Malware Analysis & Reverse Engineering' "$text_file"; then
     printf '%s\n' 'error: coursework must use the shortened malware analysis label' >&2
     exit 1
